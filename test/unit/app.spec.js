@@ -35,4 +35,81 @@ describe('app', function () {
             expect(app.divide(101, 0)).toEqual(false);
         });
     });
+
+    describe('getDescendingNumbers function', function ()
+    {
+        it('should count down', function ()
+        {
+            expect(app.getDescendingNumbers(5,2)).toEqual('5 4 3 2');
+        });
+        it('should count down', function ()
+        {
+            expect(app.getDescendingNumbers(10,2)).toEqual('10 9 8 7 6 5 4 3 2');
+        });
+        it('should return value of type', function ()
+        {
+            expect(app.getDescendingNumbers(10,2)).toEqual(typeof descendingNumbers === 'number' );
+        });
+    });
+
+    describe('areaOfTrapezoid function', function ()
+    {
+        it('should return false', function ()
+        {
+            expect(app.areaOfTrapezoid(-1,2,3)).toEqual(false);
+        });
+        it('should return false', function ()
+        {
+            expect(app.areaOfTrapezoid(1,-2,3)).toEqual(false);
+        });
+        it('should return false', function ()
+        {
+            expect(app.areaOfTrapezoid(1,2,-3)).toEqual(false);
+        });
+        it('should return false', function ()
+        {
+            expect(app.areaOfTrapezoid("1",2,3)).toEqual(false);
+        });
+        it('should return false', function ()
+        {
+            expect(app.areaOfTrapezoid(1,"2",3)).toEqual(false);
+        });
+        it('should return false', function ()
+        {
+            expect(app.areaOfTrapezoid(1,2,"3")).toEqual(false);
+        });
+        it('should return false', function ()
+        {
+            expect(app.areaOfTrapezoid(1,2,3)).toEqual();
+        });
+
+
+
+    describe('maxArray',function()
+    {
+        it('should return max number with array',function()
+        {
+            expect(app.maxArray([1,5,10,7])).toEqual(10);
+        });
+        it('should return false if array is empty',function()
+        {
+            expect(app.maxArray([])).toEqual(false);
+        });
+    });
+
+    describe('squareOdd',function()
+    {
+        it('should return array number',function()
+        {
+            expect(app.squareOdd([1,3,5])).toEqual([1,9,25]);
+        });
+        it('should return false if array have even numbers',function()
+        {
+            expect(app.squareOdd([2,4,8])).toEqual(false);
+        });
+        it('should return false if array is empty',function()
+        {
+            expect(app.squareOdd([])).toEqual(false);
+        });
+    });
 });
